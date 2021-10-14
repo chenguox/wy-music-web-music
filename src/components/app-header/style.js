@@ -63,7 +63,14 @@ export const HeaderLeft = styled.div`
       }
 
       .active .icon { // 被激活的底部出现小红三角形
-        
+        position: absolute;
+        display: inline-block; // 可以设置大小
+        width: 12px;
+        height: 7px;
+        bottom: -1px;
+        left: 50%; 
+        transform: translate(-50%, 0); // 水平左移自身的百分之五十宽度
+        background-position: -226px 0;
       }
     }
   }

@@ -10,6 +10,19 @@ import {
 } from './style';
 
 export default memo(function WYAppHeader() {
+
+  // 页面代码，只有前三个是路由跳转，这里做一下处理
+  const showSelectItem = (item, index) => {
+    if (index < 3) {
+      return (
+        <NavLink>
+          {item.title}
+        </NavLink>
+      )
+    }
+  }
+
+
   return (
     <HeaderWrapper>
       <div className="content wrap-v1">
