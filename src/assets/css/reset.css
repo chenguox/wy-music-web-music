@@ -1,4 +1,5 @@
 @import '~normalize.css';
+@import "~antd/dist/antd.css";
 
 /* 添加自己的，样式的重置 */
 
