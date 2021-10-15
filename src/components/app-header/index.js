@@ -2,7 +2,8 @@ import React, { memo } from 'react'
 
 import { headerLinks } from "@/common/local-data";
 import { NavLink } from 'react-router-dom';
-
+import { SearchOutlined } from '@ant-design/icons'
+import { Input } from "antd";
 import {
   HeaderWrapper,
   HeaderLeft,
@@ -13,14 +14,14 @@ export default memo(function WYAppHeader() {
 
   // 页面代码，只有前三个是路由跳转，这里做一下处理
   const showSelectItem = (item, index) => {
-    if (index < 3) {
+    if (index < 3 || index === 5) {
       return (
         <NavLink to={item.link}>
           {item.title}
           <i className="sprite_01 icon"></i>
         </NavLink>
       )
-    }else{
+    } else {
       return <a href="{item.link}">{item.title}</a>
     }
   }
@@ -40,7 +41,7 @@ export default memo(function WYAppHeader() {
               headerLinks.map((item, index) => {
                 return (
                   <div key={item.title} className="select-item">
-                    {showSelectItem(item,index)}
+                    {showSelectItem(item, index)}
                   </div>
                 )
               })
@@ -48,8 +49,9 @@ export default memo(function WYAppHeader() {
           </div>
         </HeaderLeft>
         <HeaderRight>
-            
-
+          <Input className="search" placeholder="音乐/视频/电台/用户" prefix={<SearchOutlined />} />
+          <div className="center">创作者中心</div>
+          <div>登录</div>
         </HeaderRight>
       </div>
       <div className="divider"></div>

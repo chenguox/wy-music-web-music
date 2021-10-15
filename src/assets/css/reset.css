@@ -1,5 +1,5 @@
 @import '~normalize.css';
-@import "~antd/dist/antd.css";
+@import '~antd/dist/antd.css';
 
 /* 添加自己的，样式的重置 */
 
@@ -155,4 +155,13 @@ button {
   bottom: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
+}
+
+/* 定义配色 */
+.s-fc3 {
+  color: #666;
+}
+
+.s-fc4 {
+  color: #999;
 }
