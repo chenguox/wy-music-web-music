@@ -17,7 +17,7 @@ export default memo(function WYAppFooter() {
             {
               footerLinks.map((item, index) => {
                 return (
-                  <Fragment>
+                  <Fragment key={item.title}>
                     <a className="item s-fc4" href={item.link}>{item.title}</a>
                     <span className="line">{footerLinks.length - 1 === index ? "" : "|"}</span>
                   </Fragment>
