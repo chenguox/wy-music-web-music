@@ -29,3 +29,20 @@ export function getNewAlbums(limit) {
     },
   });
 }
+
+// https://binaryify.github.io/NeteaseCloudMusicApi/#/?id=%e6%8e%92%e8%a1%8c%e6%a6%9c%e8%af%a6%e6%83%85
+/**
+ * 获取排行榜详情
+ * 0 新歌版
+ * 1 热歌榜
+ * 2 原创榜
+ * 3 飙升榜
+ */
+export function getTopList(idx) {
+  return request({
+    url: "/top/list",
+    params: {
+      idx,
+    },
+  });
+}

@@ -3,6 +3,7 @@ import React, { memo } from "react";
 import GXTopBanner from "./c-cpns/top-banner";
 import GXHotRecommend from "./c-cpns/hot-recommend";
 import GXNewAlbum from "./c-cpns/new-album";
+import GXRecommendRanking from "./c-cpns/recommend-ranking";
 
 import {
   RecommendWrapper,
@@ -19,6 +20,7 @@ function GXRecommend() {
         <RecommendLeft>
           <GXHotRecommend />
           <GXNewAlbum />
+          <GXRecommendRanking />
         </RecommendLeft>
         <RecommendRight></RecommendRight>
       </Content>
