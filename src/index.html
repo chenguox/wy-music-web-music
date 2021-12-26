@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn01">解气按钮</button>
+
+    <script type="text/javascript">
+      var element_btn = document.getElementById("btn01");
+      element_btn.onclick = function () {
+        var bj = document.getElementById("bj");
+        var name = "cgx";
+        var count = parseInt(Math.random() * 10);
+        var index = parseInt(Math.random() * 10);
+        console.log("index:", index);
+
+        // 坏
+        var content1 = `看${name}不爽，所以爆打${count}下`;
+        var content2 = `看${name}不爽，所以踢他${count}下`;
+        var content3 = `看${name}不爽，所以锤他${count}下`;
+        var content4 = `${name}被诅咒,所以掉了${count}颗星`;
+        var content5 = `${name}因惹你生气排位${count}连跪`;
+        var content6 = `${name}因惹你生气排位连遇到${count}把队友挂机`;
+        var content7 = `${name}因惹你生气排位全局460被举报`;
+        var content8 = `${name}因惹你生气走路摔了一跤`;
+
+        // 好
+        var content9 = `偷走了${name}的运气,所以你买彩票中了几百万`;
+        var content10 = `偷走了${name}的运气,所以你运气变得很好`;
+
+        var arrs = [
+          content1,
+          content2,
+          content3,
+          content4,
+          content5,
+          content6,
+          content7,
+          content8,
+          content9,
+          content10,
+        ];
+
+        alert(arrs[index]);
+      };
+    </script>
+  </body>
+</html>

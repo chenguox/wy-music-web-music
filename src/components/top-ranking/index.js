@@ -30,7 +30,7 @@ export default memo(function GXTopRanking(props) {
       <div className="list">
         {tracks.slice(0, 10).map((item, index) => {
           return (
-            <div>
+            <div key={item.id} className="list-item">
               <div className="rank">{index + 1}</div>
               <div className="info">
                 <span className="name text-nowrap">{item.name}</span>
@@ -44,7 +44,9 @@ export default memo(function GXTopRanking(props) {
           );
         })}
       </div>
-      <div className="footer">尾部</div>
+      <div className="footer">
+        <a href="/todo">查看全部 &gt;</a>
+      </div>
     </TopRankingWrapper>
   );
 });

@@ -1,15 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import police_icon from '@/assets/img/police.png';
-import sprite_footer_01 from '@/assets/img/sprite_footer_01.png';
-import sprite_footer_02 from '@/assets/img/sprite_footer_02.png';
+import police_icon from "@/assets/img/police.png";
+import sprite_footer_01 from "@/assets/img/sprite_footer_01.png";
+import sprite_footer_02 from "@/assets/img/sprite_footer_02.png";
 
 export const AppFooterWrapper = styled.div`
+  border-top: 1px solid #d3d3d3;
   .content {
     display: flex;
     justify-content: space-between;
   }
-`
+`;
 
 export const FooterLeft = styled.div`
   padding-top: 15px;
@@ -22,11 +23,12 @@ export const FooterLeft = styled.div`
     }
   }
 
-  .copyright,.contact {
+  .copyright,
+  .contact {
     span:first-of-type {
       margin-right: 14px;
     }
-  } 
+  }
 
   .info {
     .police-logo {
@@ -39,16 +41,18 @@ export const FooterLeft = styled.div`
       vertical-align: -2px; // 往下偏移2像素
     }
   }
-`
+`;
 export const FooterRight = styled.div`
-  .enter {   // ul
+  .enter {
+    // ul
     display: flex;
     justify-content: space-between;
     width: 420px;
     height: 70px;
     margin-top: 33px;
 
-    .item {  // li
+    .item {
+      // li
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -112,6 +116,5 @@ export const FooterRight = styled.div`
         background-position: -1px -72px;
       }
     }
-    
   }
-`
+`;

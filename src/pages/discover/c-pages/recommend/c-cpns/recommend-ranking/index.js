@@ -9,6 +9,9 @@ import { getTopListAction } from "../../store/actionCreators";
 import GXThemeHeaderRCM from "@/components/theme-header-rcm";
 import GXTopRanking from "@/components/top-ranking";
 
+// 样式组件
+import { RankingWrapper } from "./style";
+
 export default memo(function GXRecommendRanking() {
   // redux hooks
   const { upRanking, newRanking, originRanking } = useSelector((state) => ({
@@ -26,9 +29,13 @@ export default memo(function GXRecommendRanking() {
   }, [dispatch]);
 
   return (
-    <div>
+    <RankingWrapper>
       <GXThemeHeaderRCM title="榜单" />
-      <GXTopRanking info={upRanking} />
-    </div>
+      <div className="tops">
+        <GXTopRanking info={upRanking} />
+        <GXTopRanking info={newRanking} />
+        <GXTopRanking info={originRanking} />
+      </div>
+    </RankingWrapper>
   );
 });
